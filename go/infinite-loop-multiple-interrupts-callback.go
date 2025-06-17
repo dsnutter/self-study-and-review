@@ -43,17 +43,6 @@ func main() {
 		}
 	}()
 
-	/*
-		// concurrent thread with go keyword
-		go func() {
-			result, closeOk = <-c
-
-			if closeOk && result == desiredResult && cap(c) >= 1 {
-				closeInterrupt(c)
-			}
-		}()
-	*/
-
 	for {
 		time.Sleep(1 * time.Second)
 		if closeOk && cap(c) >= 1 {
